@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">PickOne</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_category_list">CategoryList</string>
+
+    <string-array name="questions">
+        <item>"Bananas Vs Apples</item>
+        <item>Trump vs Hilary</item>
+        <item>Captain America vs Iron man</item>
+        <item>Stephen Curry vs LeBron James</item>
+    </string-array>
+
+    <string-array name="choices">
+        <item>Bananas</item>
+        <item>Trump</item>
+        <item>Captain America</item>
+        <item>Stephen Curry</item>
+        <item>Apples</item>
+        <item>Hilary</item>
+        <item>Iron Man</item>
+        <item>LeBron James</item>
+    </string-array>
+
+    <string name="title_activity_question_list">QuestionList</string>
+    <string name="title_activity_profile">Profile</string>
+    <string name="title_activity_poll">Poll</string>
+    <string name="facebook_app_id">331946570500397</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_add_question">AddQuestion</string>
+</resources>

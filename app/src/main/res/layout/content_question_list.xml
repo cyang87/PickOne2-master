@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- LOL -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginTop="0dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="stembeyond.uiuc.com.pickone.QuestionList"
+    tools:showIn="@layout/activity_question_list"
+    android:background="@color/green">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/topBar"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageButton
+            android:src="@drawable/menu_icons"
+            android:scaleType="centerInside"
+            android:layout_weight="1"
+            android:backgroundTint="@color/purple"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:background="@drawable/button_normal"
+            android:id="@+id/mainButton"/>
+
+        <ImageButton
+            android:src="@drawable/choose_icon"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:backgroundTint="@color/green"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:background="@drawable/button_selected"
+            android:id="@+id/topicsButton" />
+
+        <ImageButton
+            android:backgroundTint="@color/purple"
+            android:src="@drawable/profile_icon"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:scaleType="centerInside"
+            android:layout_height="75dp"
+            android:background="@drawable/button_normal"
+            android:id="@+id/profileButton" />
+
+    </LinearLayout>
+
+    <!--
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/topBar">
+
+            <Button
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:textColor="@color/white_color"
+                android:textSize="20dp"
+                android:layout_height="75dp"
+                android:background="@drawable/button_normal"
+                android:text="Main"
+                android:id="@+id/mainButton" />
+
+            <Button
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="75dp"
+                android:textSize="20dp"
+                android:background="@drawable/button_selected"
+                android:textColor="@color/white_color"
+                android:text="Topics"
+                android:id="@+id/topicsButton" />
+
+            <Button
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:textColor="@color/white_color"
+                android:textSize="20dp"
+                android:layout_height="75dp"
+                android:background="@drawable/button_normal"
+                android:text="Profile"
+                android:id="@+id/profileButton" />
+
+        </LinearLayout>
+
+        -->
+
+
+
+
+
+
+
+    <ListView
+        android:layout_below="@id/topBar"
+        android:id="@+id/question_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/randomchoose"
+        android:layout_below="@id/question_list"
+        android:layout_centerInParent="true"
+        android:text="Random" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_question"
+        android:text="add question"/>
+
+
+</RelativeLayout>

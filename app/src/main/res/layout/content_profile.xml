@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="stembeyond.uiuc.com.pickone.Profile"
+    tools:showIn="@layout/activity_profile"
+    android:background="@color/green">
+
+    <!--
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp"
+        android:id="@+id/name_level_bar">
+
+        <Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:textColor="@color/white_color"
+            android:textSize="20dp"
+            android:layout_height="75dp"
+            android:background="@drawable/button_normal"
+            android:text="Main"
+            android:id="@+id/mainButton" />
+
+        <Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:textSize="20dp"
+            android:background="@drawable/button_normal"
+            android:textColor="@color/white_color"
+            android:text="Topics"
+            android:id="@+id/topicsButton" />
+
+        <Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:textColor="@color/white_color"
+            android:textSize="20dp"
+            android:layout_height="75dp"
+            android:background="@drawable/button_selected"
+            android:text="Profile"
+            android:id="@+id/profileButton" />
+
+    </LinearLayout>
+-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/topBar"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageButton
+            android:src="@drawable/menu_icons"
+            android:scaleType="centerInside"
+            android:layout_weight="1"
+            android:backgroundTint="@color/purple"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:background="@drawable/button_normal"
+            android:id="@+id/mainButton"/>
+
+        <ImageButton
+            android:src="@drawable/choose_icon"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:backgroundTint="@color/purple"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:background="@drawable/button_selected"
+            android:id="@+id/topicsButton" />
+
+        <ImageButton
+            android:backgroundTint="@color/green"
+            android:src="@drawable/profile_icon"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:scaleType="centerInside"
+            android:layout_height="75dp"
+            android:background="@drawable/button_normal"
+            android:id="@+id/profileButton" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topBar"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/pic_level"
+        android:layout_marginRight="20dp">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:id="@+id/circularPicture"
+            />
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:gravity="center"
+            android:id="@+id/levelTitle"
+            android:text="Level: 5"
+            android:textColor="@color/black_color"
+            android:textSize="50dp"/>
+
+    </LinearLayout>
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:background="@drawable/poll_styles"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/pic_level"
+        android:id="@+id/graph"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp">
+    </com.github.mikephil.charting.charts.BarChart>
+
+    <!-- we need to make the bar graph horizontal and also it should have a background color
+    to make these edits, we will have to modify the bar graph library directly-->
+
+  <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/graph"
+        android:layout_marginBottom="10dp"
+
+    >
+        <Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:textColor="@color/white_color"
+            android:textSize="20dp"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_buttons"
+            android:text="Choose Profile Picture"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/profilePicture"
+
+            />
+        /*
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/row_one"
+        android:layout_below="@id/graph"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="60dp">
+
+        <Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:textColor="@color/white_color"
+            android:textSize="20dp"
+            android:layout_height="75dp"
+            android:background="@drawable/rounded_buttons"
+            android:text="Revise Picks"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/revisePicks" />
+
+        <Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/rounded_buttons"
+            android:textColor="@color/white_color"
+            android:text="Friends"
+            android:id="@+id/friends" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/row_two"
+        android:layout_below="@id/row_one"
+        android:layout_marginTop="0dp">
+
+        <Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:textColor="@color/white_color"
+            android:textSize="20dp"
+            android:layout_height="75dp"
+            android:background="@drawable/rounded_buttons"
+            android:text="Social"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/social" />
+
+        <Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/rounded_buttons"
+            android:textColor="@color/white_color"
+            android:text="Trophies"
+            android:id="@+id/trophies" />
+    </LinearLayout>
+
+    <com.facebook.login.widget.LoginButton
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/row_two"
+            android:id="@+id/login_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp" />
+
+
+</RelativeLayout>
